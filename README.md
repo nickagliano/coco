@@ -1,3 +1,6 @@
+coco's custom namespace: bcc39d63-f630-43bc-becc-fa6821762aeb
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -1,0 +1,16 @@
+.toolbar {
+    width: 100%;
+}
+
+.item {
+    width: 200px;
+    padding-left: 10%;
+    padding-right: 10%;
+    color: white;
+    
+}
+
+.item:hover {
+    color: rgb(255, 255,255, 0.6);
+    cursor: pointer;
+}

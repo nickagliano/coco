@@ -1,0 +1,20 @@
+.footer {
+    position: relative;
+     left: 0;
+     bottom: 0;
+     width: 100%;
+  background-color: transparent;
+  /* text-align: center; */
+  color: white;
+  padding: .5em;
+  flex-shrink: 5;
+}
+
+.logo {
+  height: 30px;
+  pointer-events: none;
+}
+
+.slogan {
+    font-size: .5em;
+}

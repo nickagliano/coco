@@ -1,0 +1,78 @@
+html, body {
+    overflow: hidden;
+    background-color: #282c34;
+    height: 100%;
+}
+
+/* for the canvas title */
+input { 
+    font-weight: lighter;
+    font-size: 2em;
+    text-align: center;
+    padding: 5px;
+    background: green;
+    display: inline-block;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #fbfbf8
+}
+
+
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleWrapper {
+    flex-grow: 1;
+}
+
+.boardWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 1080px;
+    max-width: 45vw;
+    height: 1080px;
+    max-height: 73vh;    
+    overflow: scroll;
+    flex-grow: 1;
+    background: transparent;
+}
+
+
+.toolbarWrapper {
+    border-radius: 10px;
+    margin: 1%;
+    padding: .5%;
+    width: 40%;
+    background-color: #fbfbf850;
+    box-shadow: 0 0 3px #ddd;
+    min-height: 6vh;
+    flex-grow: 1;
+}
+
+.footerWrapper {
+    flex-grow: 1;
+}
+
+
+::-webkit-input-placeholder {
+   color: #fff;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #fff;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #fff;  
+}
+
+:-ms-input-placeholder {  
+   color: #fff;  
+}

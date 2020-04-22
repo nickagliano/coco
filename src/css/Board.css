@@ -1,0 +1,42 @@
+.myBoard125 {
+    background-color: #fbfbf8;
+    height: 1080px;
+    width: 1080px;
+    transform: scale(1.25);
+}
+
+.myBoard100 {
+    background-color: #fbfbf8;
+    height: 1080px;
+    width: 1080px;
+    transform: scale(1);
+}
+
+.myBoard75 {
+    background-color: #fbfbf8;
+    height: 1080px;
+    width: 1080px;
+    transform: scale(.75);
+}
+
+.myBoard50 {
+    background-color: #fbfbf8;
+    height: 1080px;
+    width: 1080px;
+    transform: scale(.5);
+}
+
+.myBoard25 {
+    background-color: #fbfbf8;
+    height: 1080px;
+    width: 1080px;
+    transform: scale(.25);
+    
+}
+
+
+
+.layer {
+    height: 1080px;
+    width: 1080px;
+}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <link href="React%20App_files/css2.css" rel="stylesheet"> 
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <style type="text/css">body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+</style><style type="text/css">html, body{
+    background-color: #282c34;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background-color: #282c34;
+  color: white;
+  font-family: Montserrat;
+}
+
+.pianoWrapper {
+    background-color: #282c34;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+h1 {
+    font-weight: lighter;
+}
+
+</style><style type="text/css">@media only screen and (max-device-width: 600px) {
+
+    * {
+      box-sizing:border-box
+    }
+
+    body {
+      margin:0;
+      background-color: #282c34;
+    }
+
+    .piano {
+        margin: auto;
+        background-color: #282c34;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+
+    p {
+        background-color: #282c34;
+        
+    }
+
+    ul {
+      background: transparent;
+      background-color: #282c34;
+      display: block;
+    }
+
+    li {
+      list-style:none;
+      display: inline-block;
+      position:absolute;
+    }
+
+    ul .white {
+      height:4em;
+      width:16em;
+      z-index:1;
+      border-left:1px solid #bbb;
+      border-bottom:1px solid #bbb;
+      border-radius:0 0 5px 5px;
+      box-shadow:-1px 0 0 rgba(255,255,255,0.8) inset,0 0 5px #ccc inset,0 0 3px rgba(0,0,0,0.2);
+      background:linear-gradient(to bottom,#eee 0%,#fff 100%)
+    }
+
+    ul .white:active {
+      border-top:1px solid #777;
+      border-left:1px solid #999;
+      border-bottom:1px solid #999;
+      box-shadow:2px 0 3px rgba(0,0,0,0.1) inset,-5px 5px 20px rgba(0,0,0,0.2) inset,0 0 3px rgba(0,0,0,0.2);
+      background:linear-gradient(to bottom,#fff 0%,#e9e9e9 100%)
+    }
+
+    .black {
+      height:2em;
+      width:8em;
+      margin:0 0 0 -8em;
+      z-index:2;
+      border:1px solid #000;
+      border-radius:0 0 3px 3px;
+      box-shadow:-1px -1px 2px rgba(255,255,255,0.2) inset,0 -5px 2px 3px rgba(0,0,0,0.6) inset,0 2px 4px rgba(0,0,0,0.5);
+      background:linear-gradient(45deg,#222 0%,#555 100%)
+    }
+
+    .black:active {
+      box-shadow:-1px -1px 2px rgba(255,255,255,0.2) inset,0 -2px 2px 3px rgba(0,0,0,0.6) inset,0 1px 2px rgba(0,0,0,0.5);
+      background:linear-gradient(to right,#444 0%,#222 100%)
+    }
+
+    .a {
+        margin:4em 0em 0em 0em;
+    }
+    .g {
+        margin:8em 0em 0em 0em;
+        
+    }
+    .f {
+        margin:12em 0em 0em 0em;
+        
+    }
+    .d {
+        margin:16em 0em 0em 0em;
+        
+    }
+    .c {
+        margin:20em 0em 0em 0em;
+        
+    }
+
+    ul li:first-child {
+      border-radius:5px 0 5px 5px
+    }
+
+    ul li:last-child {
+      border-radius:0 5px 5px 5px
+    }
+
+} /* end mobile only css */
+@media only screen and (min-device-width: 600px) {
+
+
+    * {
+      box-sizing:border-box
+    }
+
+    body {
+      margin:0;
+      background:#222
+    }
+
+    ul {
+      height:18.875em;
+      width:34em;
+      margin:5em auto;
+      padding:3em 0 0 3em;
+      position:relative;
+      border:1px solid #160801;
+      border-radius:1em;
+      background:linear-gradient(to bottom right,rgba(0,0,0,0.3),rgba(0,0,0,0)),url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/187/vwood.png);
+      box-shadow:0 0 50px rgba(0,0,0,0.5) inset,0 1px rgba(212,152,125,0.2) inset,0 5px 15px rgba(0,0,0,0.5)
+    }
+
+    li {
+      margin:0;
+      padding:0;
+      list-style:none;
+      position:relative;
+      float:left
+    }
+
+    ul .white {
+      height:16em;
+      width:4em;
+      z-index:1;
+      border-left:1px solid #bbb;
+      border-bottom:1px solid #bbb;
+      border-radius:0 0 5px 5px;
+      box-shadow:-1px 0 0 rgba(255,255,255,0.8) inset,0 0 5px #ccc inset,0 0 3px rgba(0,0,0,0.2);
+      background:linear-gradient(to bottom,#eee 0%,#fff 100%)
+    }
+
+    ul .white:active {
+      border-top:1px solid #777;
+      border-left:1px solid #999;
+      border-bottom:1px solid #999;
+      box-shadow:2px 0 3px rgba(0,0,0,0.1) inset,-5px 5px 20px rgba(0,0,0,0.2) inset,0 0 3px rgba(0,0,0,0.2);
+      background:linear-gradient(to bottom,#fff 0%,#e9e9e9 100%)
+    }
+
+    .black {
+      height:8em;
+      width:2em;
+      margin:0 0 0 -1em;
+      z-index:2;
+      border:1px solid #000;
+      border-radius:0 0 3px 3px;
+      box-shadow:-1px -1px 2px rgba(255,255,255,0.2) inset,0 -5px 2px 3px rgba(0,0,0,0.6) inset,0 2px 4px rgba(0,0,0,0.5);
+      background:linear-gradient(45deg,#222 0%,#555 100%)
+    }
+
+    .black:active {
+      box-shadow:-1px -1px 2px rgba(255,255,255,0.2) inset,0 -2px 2px 3px rgba(0,0,0,0.6) inset,0 1px 2px rgba(0,0,0,0.5);
+      background:linear-gradient(to right,#444 0%,#222 100%)
+    }
+
+    .a,.g,.f,.d,.c {
+      margin:0 0 0 -1em
+    }
+
+    ul li:first-child {
+      border-radius:5px 0 5px 5px
+    }
+
+    ul li:last-child {
+      border-radius:0 5px 5px 5px
+    }
+
+}</style><script charset="utf-8" src="React%20App_files/main_015.js"></script><script charset="utf-8" src="React%20App_files/main_043.js"></script><script charset="utf-8" src="React%20App_files/main_016.js"></script><script charset="utf-8" src="React%20App_files/main_032.js"></script><script charset="utf-8" src="React%20App_files/main_053.js"></script><script charset="utf-8" src="React%20App_files/main_028.js"></script><script charset="utf-8" src="React%20App_files/main_017.js"></script><script charset="utf-8" src="React%20App_files/main_023.js"></script><script charset="utf-8" src="React%20App_files/main_020.js"></script><script charset="utf-8" src="React%20App_files/main_040.js"></script><script charset="utf-8" src="React%20App_files/main_044.js"></script><script charset="utf-8" src="React%20App_files/main_024.js"></script><script charset="utf-8" src="React%20App_files/main_049.js"></script><script charset="utf-8" src="React%20App_files/main_022.js"></script><script charset="utf-8" src="React%20App_files/main_052.js"></script><script charset="utf-8" src="React%20App_files/main_026.js"></script><script charset="utf-8" src="React%20App_files/main_042.js"></script><script charset="utf-8" src="React%20App_files/main_035.js"></script><script charset="utf-8" src="React%20App_files/main_045.js"></script><script charset="utf-8" src="React%20App_files/main_021.js"></script><script charset="utf-8" src="React%20App_files/main_054.js"></script><script charset="utf-8" src="React%20App_files/main_019.js"></script><script charset="utf-8" src="React%20App_files/main_047.js"></script><script charset="utf-8" src="React%20App_files/main_037.js"></script><script charset="utf-8" src="React%20App_files/main_018.js"></script><script charset="utf-8" src="React%20App_files/main_014.js"></script><script charset="utf-8" src="React%20App_files/main_030.js"></script><script charset="utf-8" src="React%20App_files/main_046.js"></script><script charset="utf-8" src="React%20App_files/main_039.js"></script><script charset="utf-8" src="React%20App_files/main_036.js"></script><script charset="utf-8" src="React%20App_files/main_025.js"></script><script charset="utf-8" src="React%20App_files/main_005.js"></script><script charset="utf-8" src="React%20App_files/main_050.js"></script><script charset="utf-8" src="React%20App_files/main_038.js"></script><script charset="utf-8" src="React%20App_files/main_055.js"></script><script charset="utf-8" src="React%20App_files/main_031.js"></script><script charset="utf-8" src="React%20App_files/main_033.js"></script><script charset="utf-8" src="React%20App_files/main_029.js"></script><script charset="utf-8" src="React%20App_files/main_034.js"></script><script charset="utf-8" src="React%20App_files/main_051.js"></script><script charset="utf-8" src="React%20App_files/main_041.js"></script><script charset="utf-8" src="React%20App_files/main_048.js"></script><script charset="utf-8" src="React%20App_files/main_008.js"></script><script charset="utf-8" src="React%20App_files/main_002.js"></script><script charset="utf-8" src="React%20App_files/main_009.js"></script><script charset="utf-8" src="React%20App_files/main_012.js"></script><script charset="utf-8" src="React%20App_files/main.js"></script><script charset="utf-8" src="React%20App_files/main_007.js"></script><script charset="utf-8" src="React%20App_files/main_004.js"></script><script charset="utf-8" src="React%20App_files/main_006.js"></script><script charset="utf-8" src="React%20App_files/main_003.js"></script><script charset="utf-8" src="React%20App_files/main_010.js"></script><script charset="utf-8" src="React%20App_files/main_011.js"></script></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="App"><h1>Hi, I'm Nick Agliano.</h1><div class="pianoWrapper"><div class="piano"><ul class="set"><li class="white b"></li><li class="black as"></li><li class="white a"></li><li class="black gs"></li><li class="white g"></li><li class="black fs"></li><li class="white f"></li><li class="white e"></li><li class="black ds"></li><li class="white d"></li><li class="black cs"></li><li class="white c"></li></ul></div></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="React%20App_files/bundle.js"></script><script src="React%20App_files/1.js"></script><script src="React%20App_files/main_027.js"></script><script src="React%20App_files/main_013.js"></script>
+
+</body></html>
